@@ -10,6 +10,13 @@ Scope:
 
 Optional: Haben Sie in Ihrem Umfeld ein TipToi? Dann probieren sie das Produkt aus.
 
+Verteilungsdiagramm TipToi:
+
+Das Verteilungsdiagramm zeigt die physische Architektur des TipToi-Systems und die Kommunikation zwischen den beteiligten Geräten. Der PC bzw. Laptop dient als Client-Gerät, auf dem der TipToi Manager installiert ist. Über diesen werden Audiodateien, Produktaktivierungen und Firmware-Updates verwaltet. Der TipToi-Stift ist das zentrale Hardware-Gerät mit optischem Sensor (OID-Technologie), Lautsprecher, internem Speicher und USB-Schnittstelle.
+Die Verbindung zwischen PC und Stift erfolgt hauptsächlich über USB zur Datenübertragung, optional auch über WLAN. Über den WLAN-Router besteht eine Netzwerkverbindung zum Ravensburger Server, der über einen TipToi-Webservice Audiodateien, Firmware-Updates und Produktinformationen bereitstellt. Die Kommunikation zwischen Stift bzw. PC und dem Server erfolgt über das HTTPS-Protokoll.
+Das digitale Papier (OID) wie z. B. Bücher, Spielbretter oder Puzzles enthält unsichtbare Codes, die der Stift optisch erkennt, um die passenden Audioinhalte abzuspielen. Kabelgebundene Verbindungen (USB) sind durch durchgezogene Linien dargestellt, drahtlose Verbindungen (WLAN, OID) durch gestrichelte Linien.
+
+
 Quellen zu TipToi
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 - Wikipedia: https://de.wikipedia.org/wiki/Tiptoi
