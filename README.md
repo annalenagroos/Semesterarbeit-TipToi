@@ -10,13 +10,29 @@ Scope:
 
 Optional: Haben Sie in Ihrem Umfeld ein TipToi? Dann probieren sie das Produkt aus.
 
-Verteilungsdiagramm TipToi:
+## Verteilungsdiagramm
 
 Das Verteilungsdiagramm zeigt die physische Architektur des TipToi-Systems und die Kommunikation zwischen den beteiligten Geräten. Der PC bzw. Laptop dient als Client-Gerät, auf dem der TipToi Manager installiert ist. Über diesen werden Audiodateien, Produktaktivierungen und Firmware-Updates verwaltet. Der TipToi-Stift ist das zentrale Hardware-Gerät mit optischem Sensor (OID-Technologie), Lautsprecher, internem Speicher und USB-Schnittstelle.
 
 Die Verbindung zwischen PC und Stift erfolgt hauptsächlich über USB zur Datenübertragung, optional auch über WLAN. Über den WLAN-Router besteht eine Netzwerkverbindung zum Ravensburger Server, der über einen TipToi-Webservice Audiodateien, Firmware-Updates und Produktinformationen bereitstellt. Die Kommunikation zwischen Stift bzw. PC und dem Server erfolgt über das HTTPS-Protokoll.
 
 Das digitale Papier (OID) wie z. B. Bücher, Spielbretter oder Puzzles enthält unsichtbare Codes, die der Stift optisch erkennt, um die passenden Audioinhalte abzuspielen. Kabelgebundene Verbindungen (USB) sind durch durchgezogene Linien dargestellt, drahtlose Verbindungen (WLAN, OID) durch gestrichelte Linien.
+
+## Glossar
+
+| Begriff | Erklärung |
+|----------|------------|
+| **TipToi** | Interaktives Lernsystem von Ravensburger, bestehend aus einem digitalen Stift und Lernmaterialien mit unsichtbaren Codes (OID). |
+| **TipToi Manager** | Desktop-Anwendung zur Verwaltung von Audiodateien, Firmware-Updates und Produktaktivierungen für den TipToi-Stift. |
+| **OID (Optical Identification)** | Unsichtbare Punktmuster auf Büchern, Spielbrettern oder Puzzles, die vom Stift optisch erkannt werden. |
+| **Firmware** | Interne Software des TipToi-Stifts, die grundlegende Funktionen und Audioausgabe steuert. |
+| **Ravensburger Server** | Online-Dienst, der Audiodateien, Produktinformationen und Firmware-Updates für TipToi bereitstellt. |
+| **HTTPS** | Verschlüsseltes Kommunikationsprotokoll für den sicheren Datenaustausch zwischen Geräten und Server. |
+| **USB** | Physische Schnittstelle zur Verbindung und Datenübertragung zwischen PC und TipToi-Stift. |
+| **WLAN** | Drahtloses Netzwerk, das optionale Kommunikation zwischen TipToi-Stift, PC und Server ermöglicht. |
+| **Digitales Papier** | Gedrucktes Lernmaterial (z. B. Buch, Puzzle), das mithilfe von OID-Codes mit dem TipToi-Stift interagiert. |
+| **Komponente** | Ein logisches Software-Modul (z. B. TipToi Manager oder Web-Service) innerhalb der Systemarchitektur. |
+| **Device (Gerät)** | Physische Einheit im System, auf der Software-Komponenten oder Ausführungsumgebungen laufen (z. B. PC, Stift, Server). |
 
 
 Quellen zu TipToi
