@@ -1,15 +1,6 @@
-# Nächster Kurs das Template anpasen!
+# TipToi
 
-- Erst Kontext
-- Dann Anforderugnen
-- ...
-
-Wir möchten ein Produkt herstellen mit dem Namen Tiptoi. "Tiptoi ist ein interaktives Lernspiel bestehend aus einem Digitalstift und einem Spielbrett, Buch oder Puzzle mit digitalem Papier."
-
-Scope:
-
-- Alle Anwendungen im "Ökosystem" TipToi des Herstellers
-- Zwei Anwendungen (falls es Mehrere hat) mittels Use-Case-Diagramm beschreiben. Optional: Weitere Anwendungen.
+TipToi ist ein interaktives Lernsystem, welches Wissen auf spielerische und lebendige Weise vermittelt. Mit dem TipToi-Stift können Kinder Bücher, Spiele oder Puzzles entdecken, indem sie einfach auf Bilder oder Symbole tippen. Sofort ertönen passende Geräusche, Stimmen oder Erklärungen – so wird Lernen zu einem spannenden Erlebnis. Die TipToi-Anwendung auf dem Computer oder Tablet dient dazu, neue Inhalte auf den Stift zu laden und ihn mit verschiedenen Themenwelten zu erweitern. So können Kinder immer wieder Neues entdecken, selbstständig lernen und dabei jede Menge Spass haben.
 
 # Architekturdokumentation der Software TipToi
 
