@@ -1,5 +1,8 @@
-# Semesterarbeit_TipToi
-Szenario:
+# Nächster Kurs das Template anpasen!
+
+- Erst Kontext
+- Dann Anforderugnen
+- ...
 
 Wir möchten ein Produkt herstellen mit dem Namen Tiptoi. "Tiptoi ist ein interaktives Lernspiel bestehend aus einem Digitalstift und einem Spielbrett, Buch oder Puzzle mit digitalem Papier."
 
@@ -8,9 +11,163 @@ Scope:
 - Alle Anwendungen im "Ökosystem" TipToi des Herstellers
 - Zwei Anwendungen (falls es Mehrere hat) mittels Use-Case-Diagramm beschreiben. Optional: Weitere Anwendungen.
 
-Optional: Haben Sie in Ihrem Umfeld ein TipToi? Dann probieren sie das Produkt aus.
+# Architekturdokumentation der Software TipToi
 
-## Verteilungsdiagramm
+Die Architekturdokumentation basiert auf dem Template von arc42[^1].
+
+# Einführung und Ziele
+
+*Kurze Beschreibung der Anwendung und Ziele des Business* 
+
+## Funktionale Anforderungen
+
+*Hier kommt das Use Case Diagramm mit Kurzbeschreibung hin*
+## UC-01: Produkt aktivieren und spielen
+
+| Attribut | Beschreibung |
+|----------|--------------|
+| **Use Case ID** | UC-01 |
+| **Name** | Produkt aktivieren und spielen |
+| **Primärer Akteur** | Kind |
+| **Sekundäre Akteure** | tiptoi-Stift, tiptoi-Produkt (Buch/Spiel) |
+| **Vorbedingung** | - Audiodatei ist auf Stift geladen<br>- Stift ist eingeschaltet |
+| **Beschreibung** | Das Kind tippt mit dem tiptoi-Stift auf das Anmeldezeichen (grünes Power-Button-Symbol) auf der ersten Doppelseite des tiptoi-Produkts. Der Stift liest den OID-Code aus dem Produkt und spielt die entsprechende Audiodatei ab. |
+| **Nachbedingung** | Audiodatei wird abgespielt |
+| **Quelle** | tiptoi Handbuch, Ravensburger Serviceportal |
+
+---
+
+## UC-02: Stift mit PC verbinden und erkennen (via USB)
+
+| Attribut | Beschreibung |
+|----------|--------------|
+| **Use Case ID** | UC-02 |
+| **Name** | Stift mit PC verbinden und erkennen (via USB) |
+| **Primärer Akteur** | Eltern |
+| **Sekundäre Akteure** | tiptoi-Stift |
+| **Vorbedingung** | - tiptoi Manager ist installiert<br>- Stift ist eingeschaltet |
+| **Beschreibung** | Verbinden Sie den eingeschalteten tiptoi-Stift mit Ihrem Rechner. Der tiptoi-Stift wird von der Software automatisch erkannt und als USB-Massenspeicher angezeigt. |
+| **Nachbedingung** | Stift ist im Manager sichtbar und bereit für Dateiübertragung |
+| **Quelle** | tiptoi Manager Anleitung |
+
+---
+
+## UC-03: WLAN am Stift konfigurieren
+
+| Attribut | Beschreibung |
+|----------|--------------|
+| **Use Case ID** | UC-03 |
+| **Name** | WLAN am Stift konfigurieren |
+| **Primärer Akteur** | Eltern |
+| **Sekundäre Akteure** | tiptoi-Stift, WLAN-Router |
+| **Vorbedingung** | - Stift ist eingeschaltet<br>- WLAN-Zugangsdaten (SSID und Passwort) sind bekannt<br>- Ein WLAN-fähiges Hilfsgerät (Smartphone/Tablet/Laptop) ist verfügbar |
+| **Beschreibung** | Zur Einrichtung der WLAN-Verbindung stellt der Stift kurzzeitig ein unverschlüsseltes WLAN-Netz bereit (tiptoi_TW...), mit dem sich ein Hilfsgerät verbinden kann. Über die IP-Adresse 192.168.1.1 im Browser werden dem Stift die WLAN-Zugangsdaten übergeben. Der Stift bestätigt die erfolgreiche Verbindung. |
+| **Nachbedingung** | Stift ist mit dem WLAN-Netzwerk verbunden und kann Audiodateien drahtlos herunterladen |
+| **Alternativer Ablauf** | Falls Verbindung fehlschlägt, Vorgang wiederholen oder Router-Einstellungen prüfen (MAC-Filter, Firewall) |
+| **Quelle** | Ravensburger Serviceportal - WLAN einrichten |
+
+---
+
+## UC-04: Audiodatei suchen und herunterladen
+
+| Attribut | Beschreibung |
+|----------|--------------|
+| **Use Case ID** | UC-04 |
+| **Name** | Audiodatei suchen und herunterladen |
+| **Primärer Akteur** | Eltern |
+| **Sekundäre Akteure** | Ravensburger Server |
+| **Vorbedingung** | - tiptoi Manager ist geöffnet<br>- Internetverbindung besteht |
+| **Beschreibung** | Geben Sie in die Suchleiste den Titel Ihres tiptoi-Produkts ein und bestätigen Sie die Suche. Klicken Sie auf das Download-Icon an Ihrem tiptoi-Produkt. Der Download startet automatisch vom Ravensburger Server. |
+| **Nachbedingung** | Audiodatei ist auf dem PC heruntergeladen und bereit zur Übertragung |
+| **Quelle** | ravensburger.de/tiptoi-manager |
+
+---
+
+## UC-05: Audiodatei auf Stift übertragen
+
+| Attribut | Beschreibung |
+|----------|--------------|
+| **Use Case ID** | UC-05 |
+| **Name** | Audiodatei auf Stift übertragen |
+| **Primärer Akteur** | Eltern |
+| **Sekundäre Akteure** | tiptoi-Stift |
+| **Vorbedingung** | - Stift ist per USB verbunden<br>- Audiodatei ist heruntergeladen |
+| **Beschreibung** | Die Audiodatei wird automatisch auf den angeschlossenen tiptoi-Stift installiert. Der tiptoi Manager zeigt den Fortschritt an. |
+| **Nachbedingung** | Audiodatei ist auf dem Stift verfügbar und kann vom Kind genutzt werden |
+| **Alternativer Ablauf** | Bei WLAN-Edition: Audiodatei kann auch drahtlos per WLAN auf den Stift übertragen werden, wenn dieser mit dem Netzwerk verbunden ist |
+| **Quelle** | tiptoi Manager Anleitung |
+
+---
+
+## UC-06: Stift-Inhalte verwalten
+
+| Attribut | Beschreibung |
+|----------|--------------|
+| **Use Case ID** | UC-06 |
+| **Name** | Stift-Inhalte verwalten |
+| **Primärer Akteur** | Eltern |
+| **Sekundäre Akteure** | tiptoi-Stift |
+| **Vorbedingung** | - Stift ist mit PC verbunden<br>- tiptoi Manager ist geöffnet |
+| **Beschreibung** | In der Navigation unter "Stift und Inhalte verwalten" finden Sie eine Liste Ihrer installierten Produkte. Nicht benötigte Audiodateien können gelöscht werden, um Speicherplatz freizugeben. Der Manager zeigt auch an, ob Aktualisierungen für installierte Produkte verfügbar sind. |
+| **Nachbedingung** | Stift-Speicher ist optimiert und verwaltet |
+| **Quelle** | tiptoi Manager Anleitung |
+
+---
+
+## UC-07: Firmware aktualisieren
+
+| Attribut | Beschreibung |
+|----------|--------------|
+| **Use Case ID** | UC-07 |
+| **Name** | Firmware aktualisieren |
+| **Primärer Akteur** | Eltern |
+| **Sekundäre Akteure** | tiptoi-Stift, Ravensburger Server |
+| **Vorbedingung** | - Stift ist mit PC verbunden<br>- Neue Firmware-Version ist auf dem Server verfügbar<br>- Internetverbindung besteht |
+| **Beschreibung** | Der tiptoi Manager informiert automatisch über verfügbare Firmware-Updates und hilft beim Aktualisieren des Betriebssystems des Stifts. Das Update wird heruntergeladen und auf den Stift übertragen. |
+| **Nachbedingung** | Stift hat die aktuelle Firmware-Version installiert |
+| **Hinweis** | Während des Updates darf der Stift nicht vom PC getrennt werden |
+| **Quelle** | tiptoi Manager Anleitung |
+
+---
+
+## UC-08: Stift mit Energie versorgen / aufladen
+
+| Attribut | Beschreibung |
+|----------|--------------|
+| **Use Case ID** | UC-08 |
+| **Name** | Stift mit Energie versorgen / aufladen |
+| **Primärer Akteur** | Eltern |
+| **Sekundärer Akteur** | tiptoi-Stift |
+| **Vorbedingung** | - Micro-USB-Kabel ist vorhanden<br>- USB-Netzteil (500mA-1A, 5V) oder PC mit USB-Anschluss ist verfügbar |
+| **Beschreibung** | Der integrierte Akku des Stiftes (WLAN Edition) kann mit dem mitgelieferten Micro-USB-Kabel an einem Computer oder einem USB-Netzteil aufgeladen werden. Der Ladevorgang erfolgt bei Raumtemperatur. |
+| **Nachbedingung** | Stift ist vollständig aufgeladen und einsatzbereit |
+| **Hinweis** | Dieser Vorgang benötigt die tiptoi Manager Software nicht und ist daher außerhalb der System-Grenze. Der Stift darf nicht in direkter Sonne oder auf einem Heizkörper geladen werden. |
+| **Quelle** | tiptoi Handbuch |
+
+---
+
+## UC-09: tiptoi Manager installieren
+
+| Attribut | Beschreibung |
+|----------|--------------|
+| **Use Case ID** | UC-09 |
+| **Name** | tiptoi Manager installieren |
+| **Primärer Akteur** | Eltern |
+| **System** | Betriebssystem (PC/Mac) |
+| **Vorbedingung** | - Installationsdatei ist heruntergeladen<br>- PC/Mac erfüllt Systemanforderungen (Windows XP/Vista/7 oder neuer, Mac OS X ab 10.12) |
+| **Beschreibung** | Die Installationsdatei für den tiptoi Manager wird auf dem PC oder Mac ausgeführt. Die Software führt durch den Installationsprozess. Nach der Installation kann der Manager gestartet und optional ein Benutzerkonto erstellt werden. |
+| **Nachbedingung** | tiptoi Manager ist einsatzbereit und kann Stifte erkennen |
+| **Hinweis** | Dies ist ein Vorbereitungsschritt und kein Use Case der tiptoi Manager Software selbst, daher außerhalb der System-Grenze. |
+| **Quelle** | ravensburger.de/tiptoi-manager |
+
+
+# Kontext & Abgrenzung
+
+*Kontextdiagramm und Kurzbeschreibung.*
+
+# Verteilungssicht
+
+*Verteilungsdiagramm + Beschreibung*
 
 Das Verteilungsdiagramm zeigt die physische Architektur des TipToi-Systems und die Kommunikation zwischen den beteiligten Geräten. Der PC bzw. Laptop dient als Client-Gerät, auf dem der TipToi Manager installiert ist. Über diesen werden Audiodateien, Produktaktivierungen und Firmware-Updates verwaltet. Der TipToi-Stift ist das zentrale Hardware-Gerät mit optischem Sensor (OID-Technologie), Lautsprecher, internem Speicher und USB-Schnittstelle.
 
@@ -18,7 +175,11 @@ Die Verbindung zwischen PC und Stift erfolgt hauptsächlich über USB zur Daten�
 
 Das digitale Papier (OID) wie z. B. Bücher, Spielbretter oder Puzzles enthält unsichtbare Codes, die der Stift optisch erkennt, um die passenden Audioinhalte abzuspielen. Kabelgebundene Verbindungen (USB) sind durch durchgezogene Linien dargestellt, drahtlose Verbindungen (WLAN, OID) durch gestrichelte Linien.
 
-## Glossar
+# Qualitätsanforderungen
+
+*Beschreibung der wichtigsten Qualitätsanforderungen*
+
+# Glossar
 
 | Begriff | Erklärung |
 |----------|------------|
@@ -28,23 +189,23 @@ Das digitale Papier (OID) wie z. B. Bücher, Spielbretter oder Puzzles enthält 
 | **Firmware** | Interne Software des TipToi-Stifts, die grundlegende Funktionen und Audioausgabe steuert. |
 | **Ravensburger Server** | Online-Dienst, der Audiodateien, Produktinformationen und Firmware-Updates für TipToi bereitstellt. |
 | **HTTPS** | Verschlüsseltes Kommunikationsprotokoll für den sicheren Datenaustausch zwischen Geräten und Server. |
-| **USB** | Physische Schnittstelle zur Verbindung und Datenübertragung zwischen PC und TipToi-Stift. |
-| **WLAN** | Drahtloses Netzwerk, das optionale Kommunikation zwischen TipToi-Stift, PC und Server ermöglicht. |
+| **USB-Massenspeicher** | Der Stift wird am PC als externer Speicher erkannt |
+| **WLAN-Edition** | Spezialausgabe des tiptoi-Stifts der 3. Generation mit integriertem WLAN-Modul |
 | **Digitales Papier** | Gedrucktes Lernmaterial (z. B. Buch, Puzzle), das mithilfe von OID-Codes mit dem TipToi-Stift interagiert. |
 | **Komponente** | Ein logisches Software-Modul (z. B. TipToi Manager oder Web-Service) innerhalb der Systemarchitektur. |
 | **Device (Gerät)** | Physische Einheit im System, auf der Software-Komponenten oder Ausführungsumgebungen laufen (z. B. PC, Stift, Server). |
+| **System-Grenze** | Grenze zwischen dem tiptoi Manager System und externen Akteuren/Systemen |
+| **Anmeldezeichen** | Grünes Power-Button-Symbol auf der ersten Seite von tiptoi-Produkten zur Aktivierung |
 
+---
 
-Quellen zu TipToi
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-- Wikipedia: https://de.wikipedia.org/wiki/Tiptoi
-- Offizielle Seite von Ravensburger: https://www.ravensburger.de/entdecken/ravensburger-marken/tiptoi/index.html
-  - Serivce TipToi: https://service.ravensburger.de/tiptoi%C2%AE
-- Spieleanleitungen: https://www.ravensburger.de/de-CH/service/spielanleitungen mit der Suche "TipToi", insbesondere:
-  - tiptoi® Stift (00500) oder
-  - tiptoi® Der Stift - WLAN-Edition, DLC_S6_Window_Clng_A3 (00036)
-  - sowie eines der Bücher.
-- Präsentation von Joachim Breitner "Der Tiptoi-Stift": https://youtu.be/GzXtgR73icg. Interessante Stellen: 04:00, 08:14, 11:04, 14:32, (15:42) zu 20:07, 51:21, 53:55.
-- TipToi-Tool und ReverseEngineering: https://github.com/entropia/tip-toi-reveng mit wiki: https://github.com/entropia/tip-toi-reveng/wiki
-- Interview ♦ Marco Teubner über Spiele für den Tiptoi
-- (weniger relevant) Beitrag von srf zu Spieleentwicklung: https://www.srf.ch/radio-srf-3/digital/specials/computer-im-beruf/ulrich-blum-spieleautor-spiele-sind-anspruchsvoller-geworden
+## Quellen
+
+- Ravensburger tiptoi Handbuch (Stift 3. Generation mit Aufnahmefunktion und WLAN)
+- Ravensburger Serviceportal: service.ravensburger.de/tiptoi
+- tiptoi Manager Download-Seite: ravensburger.de/tiptoi-manager
+- Wikipedia: de.wikipedia.org/wiki/Tiptoi
+
+---
+
+[^1]: [arc42-Template](https://www.arc42.de/overview/)# Semesterarbeit_TipToi
