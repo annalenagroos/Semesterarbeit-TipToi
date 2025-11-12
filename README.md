@@ -12,7 +12,6 @@ Die Architekturdokumentation basiert auf dem Template von arc42[^1].
 
 ## Funktionale Anforderungen
 
-*Hier kommt das Use Case Diagramm mit Kurzbeschreibung hin*
 ## UC-01: Produkt aktivieren und spielen
 
 | Attribut | Beschreibung |
