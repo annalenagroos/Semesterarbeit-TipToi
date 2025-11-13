@@ -148,7 +148,7 @@ Die Architekturdokumentation basiert auf dem Template von arc42[^1].
 
 # Verteilungssicht
 
-*Verteilungsdiagramm + Beschreibung*
+![Verteilungsdiagramm](/verteilungsdiagram.png)
 
 Das Verteilungsdiagramm zeigt die physische Architektur des TipToi-Systems und die Kommunikation zwischen den beteiligten Geräten. Der PC bzw. Laptop dient als Client-Gerät, auf dem der TipToi Manager installiert ist. Über diesen werden Audiodateien, Produktaktivierungen und Firmware-Updates verwaltet. Der TipToi-Stift ist das zentrale Hardware-Gerät mit optischem Sensor (OID-Technologie), Lautsprecher, internem Speicher und USB-Schnittstelle.
 
