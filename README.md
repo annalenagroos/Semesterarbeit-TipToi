@@ -154,7 +154,7 @@ Die Architekturdokumentation basiert auf dem Template von arc42[^1].
 
 Das Verteilungsdiagramm beschreibt die physische und softwaretechnische Architektur des TipToi-Systems. Es stellt dar, wie die Systemkomponenten auf Geräte und Server verteilt sind und über welche Kommunikationswege digitale Inhalte (Audio, Firmware, Metadaten) bereitgestellt und genutzt werden. Es zeigt eine klare Trennung zwischen Clientgerät, Endgerät, Backend und Content-System. Diese Struktur ermöglicht eine robuste Bereitstellung digitaler Inhalte und unterstützt ein wartbares, skalierbares und überwiegend offline funktionierendes Gesamtsystem.
 
-### Systemübersicht der beteiligten Geräte und Umgebungen
+### Systemübersicht der Systemelemente
 **PC / Laptop**
 
 Der PC bzw. Laptop dient als Clientgerät und stellt das Betriebssystem als Ausführungsumgebung für den TipToi Manager bereit.
