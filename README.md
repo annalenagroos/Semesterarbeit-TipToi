@@ -167,7 +167,63 @@ Das digitale Papier (OID) wie z. B. Bücher, Spielbretter oder Puzzles enthält 
 
 # Qualitätsanforderungen
 
-*Beschreibung der wichtigsten Qualitätsanforderungen*
+## QualitätsAnforderung-01 [QA-01]: Leistungseffizienz - Zeitverhalten
+
+**Use Case:** UC-01 (Produkt aktivieren und spielen)  
+**Kategorie:** Leistungseffizienz (Zeitverhalten)  
+**Priorität:** Hoch
+
+### Beschreibung
+Ein Kind tippt mit dem tiptoi-Stift auf das Anmeldezeichen (grünes Power-Button-Symbol) eines neuen tiptoi-Buchs. Der Stift muss den OID-Code auslesen, die zugehörige Audiodatei (ca. 50 MB) im internen Speicher lokalisieren und die Wiedergabe starten. Das Kind erwartet eine sofortige Reaktion, um die Motivation zum Spielen aufrechtzuerhalten.
+
+### Metrik
+- **Maximale Reaktionszeit** vom Antippen bis zum Start der Audiowiedergabe: **< 1,5 Sekunden**
+- **Erfolgsquote** bei korrekter Erkennung des OID-Codes beim ersten Versuch: **> 95%**
+- **Maximale Suchzeit** im Dateisystem bei 50 installierten Produkten: **< 0,8 Sekunden**
+- **CPU-Auslastung** während des Ladevorgangs: **< 60%** (um Akkuleistung zu schonen)
+
+### Begründung
+Die kurze Reaktionszeit ist entscheidend für die Kinderfreundlichkeit des Systems. Kinder haben eine kurze Aufmerksamkeitsspanne – Verzögerungen über 2 Sekunden führen zu Frustration und mehrfachem Antippen, was die Benutzererfahrung erheblich verschlechtert. Die Leistungseffizienz beeinflusst direkt die Akzeptanz des Produkts bei der Zielgruppe (Kinder 3-10 Jahre). Eine niedrige CPU-Auslastung verlängert zudem die Akkulaufzeit, was die Benutzbarkeit im Alltag verbessert.
+
+---
+
+## QA-02: Wartbarkeit - Modifizierbarkeit
+
+**Use Case:** UC-06 (Stift-Inhalte verwalten)  
+**Kategorie:** Wartbarkeit (Modifizierbarkeit)  
+**Priorität:** Mittel
+
+### Beschreibung
+Ravensburger führt eine neue Produktkategorie "tiptoi Hörbücher" ein, die in der Verwaltungsansicht des tiptoi Managers separat angezeigt werden soll. Ein Entwickler muss die Funktion "Stift-Inhalte verwalten" erweitern, um die neue Kategorie mit eigenem Icon, Filterfunktion und Speicherplatz-Anzeige zu unterstützen. Die Änderung darf bestehende Funktionen (Anzeige von Büchern, Spielen, Stiften) nicht beeinträchtigen.
+
+### Metrik
+- **Implementierungszeit:** **< 8 Stunden** (1 Arbeitstag) für einen erfahrenen Entwickler
+- **Anzahl betroffener Module:** Maximal **3 Module** (UI-Komponente, Datenmodell, Filter-Logik)
+- **Regressionstests:** Bestehende Funktionen bleiben zu **100% funktionsfähig** (automatisierte Tests)
+- **Code-Änderungen:** **< 200 Zeilen** neuer/geänderter Code
+- **Deployment:** Keine Änderung der Datenbankstruktur oder Migration erforderlich
+
+### Begründung
+Die Modifizierbarkeit ist entscheidend für die Zukunftsfähigkeit des Systems. Ravensburger erweitert sein Produktportfolio kontinuierlich (ca. 3-5 neue Produktkategorien pro Jahr). Eine modulare Architektur mit klaren Schnittstellen ermöglicht schnelle Anpassungen ohne Risiko von Regressionsfehlern. Die geringe Anzahl betroffener Module zeigt eine gute Kapselung und reduziert Wartungskosten erheblich. Time-to-Market für neue Features wird durch hohe Wartbarkeit signifikant verkürzt.
+
+---
+
+## QA-03: Benutzbarkeit - Erlernbarkeit
+
+**Use Case:** UC-03 (WLAN am Stift konfigurieren)  
+**Kategorie:** Benutzbarkeit (Erlernbarkeit)  
+**Priorität:** Hoch
+
+### Beschreibung
+Ein technisch unerfahrener Elternteil richtet erstmals die WLAN-Funktion des tiptoi-Stifts ein. Die Person schafft es, ohne Handbuch oder externe Hilfe innerhalb von 5 Minuten die WLAN-Verbindung erfolgreich zu konfigurieren und eine erste Audiodatei herunterzuladen.
+
+### Metrik
+- **Erfolgsquote:** **80% der Test-Nutzer** (ohne technische Vorkenntnisse) schaffen die Einrichtung in **< 5 Minuten**
+- **Maximale Anzahl Fehler** während der Einrichtung: **2**
+- **Erfolgsquote beim ersten Versuch:** **> 70%**
+
+### Begründung
+Die Erlernbarkeit ist kritisch für die Marktakzeptanz der WLAN-Edition. Die Hauptzielgruppe (Eltern mit Kindern 3-10 Jahre) hat sehr heterogene technische Vorkenntnisse. Eine intuitive Benutzerführung ohne Handbuchlektüre reduziert Support-Anfragen drastisch (geschätzt -40% Kosten) und verhindert negative Bewertungen aufgrund von Einrichtungsproblemen. Die 5-Minuten-Grenze orientiert sich an Usability-Standards für Consumer-Electronics (Nielsen Norman Group) und der durchschnittlichen Geduld von Eltern in Alltagssituationen.
 
 # Glossar
 
