@@ -12,11 +12,10 @@ Die Architekturdokumentation basiert auf dem Template von arc42[^1].
 
 ## Funktionale Anforderungen
 
-## UC-01: Produkt aktivieren und spielen
+## [UC-01] UserCase-01: Produkt aktivieren und spielen
 
 | Attribut | Beschreibung |
 |----------|--------------|
-| **Use Case ID** | UC-01 |
 | **Name** | Produkt aktivieren und spielen |
 | **Primärer Akteur** | Kind |
 | **Sekundäre Akteure** | tiptoi-Stift, tiptoi-Produkt (Buch/Spiel) |
@@ -31,7 +30,6 @@ Die Architekturdokumentation basiert auf dem Template von arc42[^1].
 
 | Attribut | Beschreibung |
 |----------|--------------|
-| **Use Case ID** | UC-02 |
 | **Name** | Stift mit PC verbinden und erkennen (via USB) |
 | **Primärer Akteur** | Eltern |
 | **Sekundäre Akteure** | tiptoi-Stift |
@@ -46,7 +44,6 @@ Die Architekturdokumentation basiert auf dem Template von arc42[^1].
 
 | Attribut | Beschreibung |
 |----------|--------------|
-| **Use Case ID** | UC-03 |
 | **Name** | WLAN am Stift konfigurieren |
 | **Primärer Akteur** | Eltern |
 | **Sekundäre Akteure** | tiptoi-Stift, WLAN-Router |
@@ -62,7 +59,6 @@ Die Architekturdokumentation basiert auf dem Template von arc42[^1].
 
 | Attribut | Beschreibung |
 |----------|--------------|
-| **Use Case ID** | UC-04 |
 | **Name** | Audiodatei suchen und herunterladen |
 | **Primärer Akteur** | Eltern |
 | **Sekundäre Akteure** | Ravensburger Server |
@@ -77,7 +73,6 @@ Die Architekturdokumentation basiert auf dem Template von arc42[^1].
 
 | Attribut | Beschreibung |
 |----------|--------------|
-| **Use Case ID** | UC-05 |
 | **Name** | Audiodatei auf Stift übertragen |
 | **Primärer Akteur** | Eltern |
 | **Sekundäre Akteure** | tiptoi-Stift |
@@ -93,7 +88,6 @@ Die Architekturdokumentation basiert auf dem Template von arc42[^1].
 
 | Attribut | Beschreibung |
 |----------|--------------|
-| **Use Case ID** | UC-06 |
 | **Name** | Stift-Inhalte verwalten |
 | **Primärer Akteur** | Eltern |
 | **Sekundäre Akteure** | tiptoi-Stift |
@@ -108,7 +102,6 @@ Die Architekturdokumentation basiert auf dem Template von arc42[^1].
 
 | Attribut | Beschreibung |
 |----------|--------------|
-| **Use Case ID** | UC-07 |
 | **Name** | Firmware aktualisieren |
 | **Primärer Akteur** | Eltern |
 | **Sekundäre Akteure** | tiptoi-Stift, Ravensburger Server |
@@ -124,7 +117,6 @@ Die Architekturdokumentation basiert auf dem Template von arc42[^1].
 
 | Attribut | Beschreibung |
 |----------|--------------|
-| **Use Case ID** | UC-08 |
 | **Name** | Stift mit Energie versorgen / aufladen |
 | **Primärer Akteur** | Eltern |
 | **Sekundärer Akteur** | tiptoi-Stift |
@@ -140,7 +132,6 @@ Die Architekturdokumentation basiert auf dem Template von arc42[^1].
 
 | Attribut | Beschreibung |
 |----------|--------------|
-| **Use Case ID** | UC-09 |
 | **Name** | tiptoi Manager installieren |
 | **Primärer Akteur** | Eltern |
 | **System** | Betriebssystem (PC/Mac) |
