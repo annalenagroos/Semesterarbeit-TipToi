@@ -238,6 +238,7 @@ Die Erlernbarkeit ist kritisch für die Marktakzeptanz der WLAN-Edition. Die Hau
 
 ## Quellen
 
+- NielsenNormanGroup: https://www.nngroup.com/articles/usability-101-introduction-to-usability/
 - Ravensburger tiptoi Handbuch (Stift 3. Generation mit Aufnahmefunktion und WLAN)
 - Ravensburger Serviceportal: service.ravensburger.de/tiptoi
 - tiptoi Manager Download-Seite: ravensburger.de/tiptoi-manager
