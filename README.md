@@ -146,43 +146,6 @@ Die Architekturdokumentation basiert auf dem Template von arc42[^1].
 
 *Kontextdiagramm und Kurzbeschreibung.*
 
-# Verteilungssicht
-
-![Verteilungsdiagramm](/Verteilungsdiagramm.png)
-
-### Zweck und Kontext
-
-Das Verteilungsdiagramm beschreibt die physische und softwaretechnische Architektur des TipToi-Systems. Es stellt dar, wie die Systemkomponenten auf Geräte und Server verteilt sind und über welche Kommunikationswege digitale Inhalte (Audio, Firmware, Metadaten) bereitgestellt und genutzt werden. Es zeigt eine klare Trennung zwischen Clientgerät, Endgerät, Backend und Content-System. Diese Struktur ermöglicht eine robuste Bereitstellung digitaler Inhalte und unterstützt ein wartbares, skalierbares und überwiegend offline funktionierendes Gesamtsystem.
-
-### Systemübersicht der Systemelemente
-**PC / Laptop**
-
-Der PC bzw. Laptop dient als Clientgerät und stellt das Betriebssystem als Ausführungsumgebung für den TipToi Manager bereit.
-Dieser verwaltet den TipToi-Stift, lädt Inhalts- und Firmwaredateien über HTTPS vom Backend und überträgt sie per USB oder optional WLAN auf den Stift.
-
-**TipToi-Stift**
-
-Der TipToi-Stift verwendet eine eingebettete Firmware zur OID-Erkennung, Audioausgabe und lokalen Inhaltsverwaltung. Inhalte werden vom TipToi Manager übernommen; zusätzlich kann der Stift über HTTPS Staus- oder Registrierungsdaten an den Backend-Webservice senden.
-
-**Ravensburger Server**
-
-Der Server bildet das Backend und stellt in einer Webserver-Umgebung den TipToi Webservice (REST-API) bereit.
-Dieser liefert Inhalte und Firmware an den TipToi Manager und greift auf die Produktdatenbank zu, in der Produkt- und Lizenzdaten verwaltet werden.
-
-**Content Plattform**
-
-Die Content Plattform umfasst das Inhaltsverwaltungssystem sowie die Content-Auslieferung. Sie stellt alle Audio-, Medien- und Firmwaredateien bereit, die der Webservice für Anfragen des Clients benötigt.
-
-**Digitales Papier (OID)**
-
-Das digitale Papier enthält OID-Muster, die vom TipToi-Stift optisch erkannt werden. Es besitzt keine eigene Software, dient jedoch als physische Schnittstelle für die Offline-Nutzung der Inhalte.
-
-### Kommunikations- und Interaktionsmodell
-
-Der TipToi Manager lädt Inhalte über den Webservice vom Ravensburger Server, welcher die Daten aus der Content Plattform bezieht. Die übertragenen Inhalte werden anschliessend per USB oder WLAN auf den TipToi-Stift synchronisiert.
-Im Betrieb erkennt der Stift die OID-Codes auf dem digitalen Papier und spielt die lokal gespeicherten Inhalte autonom ab.
-
-
 # Qualitätsanforderungen
 
 ## QualitätsAnforderung-01 [QA-01]: Leistungseffizienz - Zeitverhalten
@@ -242,6 +205,44 @@ Ein technisch unerfahrener Elternteil richtet erstmals die WLAN-Funktion des tip
 
 ### Begründung
 Die Erlernbarkeit ist kritisch für die Marktakzeptanz der WLAN-Edition. Die Hauptzielgruppe (Eltern mit Kindern 3-10 Jahre) hat sehr heterogene technische Vorkenntnisse. Eine intuitive Benutzerführung ohne Handbuchlektüre reduziert Support-Anfragen drastisch (geschätzt -40% Kosten) und verhindert negative Bewertungen aufgrund von Einrichtungsproblemen. Die 5-Minuten-Grenze orientiert sich an Usability-Standards für Consumer-Electronics (Nielsen Norman Group) und der durchschnittlichen Geduld von Eltern in Alltagssituationen.
+
+
+# Verteilungssicht
+
+![Verteilungsdiagramm](/Verteilungsdiagramm.png)
+
+### Zweck und Kontext
+
+Das Verteilungsdiagramm beschreibt die physische und softwaretechnische Architektur des TipToi-Systems. Es stellt dar, wie die Systemkomponenten auf Geräte und Server verteilt sind und über welche Kommunikationswege digitale Inhalte (Audio, Firmware, Metadaten) bereitgestellt und genutzt werden. Es zeigt eine klare Trennung zwischen Clientgerät, Endgerät, Backend und Content-System. Diese Struktur ermöglicht eine robuste Bereitstellung digitaler Inhalte und unterstützt ein wartbares, skalierbares und überwiegend offline funktionierendes Gesamtsystem.
+
+### Systemübersicht der Systemelemente
+**PC / Laptop**
+
+Der PC bzw. Laptop dient als Clientgerät und stellt das Betriebssystem als Ausführungsumgebung für den TipToi Manager bereit.
+Dieser verwaltet den TipToi-Stift, lädt Inhalts- und Firmwaredateien über HTTPS vom Backend und überträgt sie per USB oder optional WLAN auf den Stift.
+
+**TipToi-Stift**
+
+Der TipToi-Stift verwendet eine eingebettete Firmware zur OID-Erkennung, Audioausgabe und lokalen Inhaltsverwaltung. Inhalte werden vom TipToi Manager übernommen; zusätzlich kann der Stift über HTTPS Staus- oder Registrierungsdaten an den Backend-Webservice senden.
+
+**Ravensburger Server**
+
+Der Server bildet das Backend und stellt in einer Webserver-Umgebung den TipToi Webservice (REST-API) bereit.
+Dieser liefert Inhalte und Firmware an den TipToi Manager und greift auf die Produktdatenbank zu, in der Produkt- und Lizenzdaten verwaltet werden.
+
+**Content Plattform**
+
+Die Content Plattform umfasst das Inhaltsverwaltungssystem sowie die Content-Auslieferung. Sie stellt alle Audio-, Medien- und Firmwaredateien bereit, die der Webservice für Anfragen des Clients benötigt.
+
+**Digitales Papier (OID)**
+
+Das digitale Papier enthält OID-Muster, die vom TipToi-Stift optisch erkannt werden. Es besitzt keine eigene Software, dient jedoch als physische Schnittstelle für die Offline-Nutzung der Inhalte.
+
+### Kommunikations- und Interaktionsmodell
+
+Der TipToi Manager lädt Inhalte über den Webservice vom Ravensburger Server, welcher die Daten aus der Content Plattform bezieht. Die übertragenen Inhalte werden anschliessend per USB oder WLAN auf den TipToi-Stift synchronisiert.
+Im Betrieb erkennt der Stift die OID-Codes auf dem digitalen Papier und spielt die lokal gespeicherten Inhalte autonom ab.
+
 
 # Glossar
 
