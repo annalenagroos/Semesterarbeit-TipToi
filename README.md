@@ -12,6 +12,8 @@ Die Architekturdokumentation basiert auf dem Template von arc42[^1].
 
 ## Funktionale Anforderungen
 
+![Anwendungsfalldiagramm tiptoi-Manager](/Anwendungsfalldiagramm_TipToi.png)
+
 ## [UC-01] UserCase-01: Produkt aktivieren und spielen
 
 | Attribut | Beschreibung |
