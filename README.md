@@ -39,7 +39,8 @@ Der tiptoi Manager informiert automatisch über verfügbare Firmware-Updates und
 
 # Kontext & Abgrenzung
 
-*Kontextdiagramm und Kurzbeschreibung.*
+![Kontextdiagramm_Tiptoi](/kontextdiagramm_tiptoi.png)
+
 Das TipToi Integrated Learning Environment (ILE) stellt ein vernetztes Lernökosystem der Ravensburger AG dar, das physische Lernprodukte mit digitaler Audio-Interaktion verbindet. Kern des Systems ist der TipToi Digital Pen, der mittels Optical Identifier Codes (OID) gedruckte Markierungen auf Lernmedien erkennt und kontextabhängige Audioinhalte auslöst. Diese Inhalte werden in proprietären GME-Dateiformaten gespeichert, die strukturierte Metadaten, Audiosequenzen und Interaktionslogik enthalten.
 
 Die TipToi Manager Application auf PC/Mac fungiert als Bindeglied zwischen Benutzer, Gerät und der Ravensburger Content Delivery Platform. Über diese Plattform werden lizenzierte Inhalte, Firmware-Updates und Medienpakete bereitgestellt, während lokale Synchronisations-Services die Offline-Verfügbarkeit sicherstellen. Der Erziehungsberechtigte (Elternkonto) übernimmt dabei Geräteverwaltung, Content-Käufe (via Digital Commerce Service) und Datensynchronisation über WLAN oder USB-Schnittstellen.
