@@ -37,8 +37,9 @@ In der Navigation unter "Stift und Inhalte verwalten" ist eine Liste Ihrer insta
 #### UC-07: Firmware aktualisieren
 Der tiptoi Manager informiert automatisch über verfügbare Firmware-Updates und hilft beim Aktualisieren des Betriebssystems des Stifts. Das Update wird durch den User heruntergeladen und auf den Stift übertragen. 
 
+### Anwendungsfall tiptoi-Stift
 
-![Anwendungsfalldiagramm TipToi-Stift](/Anwendungsdiagramm_Stift.png)
+![Anwendungsfalldiagramm tiptoi-Stift](/Anwendungsdiagramm_Stift.png)
 
 #### UC-01: Produkt aktivieren und spielen
 Das Kind tippt mit dem Tiptoi-Stift auf das Aktivierungszeichen eines Tiptoi-Produkts. Der Stift liest den OID-Code aus und spielt direkt die zugehörigen Audiodateien ab. Dadurch kann das Kind sofort mit dem Buch oder Spiel interagieren.
