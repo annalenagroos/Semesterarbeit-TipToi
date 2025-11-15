@@ -16,7 +16,7 @@ Die Architekturdokumentation basiert auf dem Template von arc42[^1].
 
 ![Anwendungsfalldiagramm tiptoi-Manager](/Anwendungsfalldiagramm_TipToi.png)
 
-#### [UC-01] UserCase-01: Produkt aktivieren und spielen
+#### UC-01: UserCase-01: Produkt aktivieren und spielen
 Das Kind tippt mit dem tiptoi-Stift auf das Anmeldezeichen (grünes Power-Button-Symbol) auf der ersten Doppelseite des tiptoi-Produkts. Der Stift liest den OID-Code aus dem Produkt und spielt die entsprechende Audiodatei ab.
 
 #### UC-02: Stift mit PC verbinden und erkennen (via USB)
@@ -36,6 +36,55 @@ In der Navigation unter "Stift und Inhalte verwalten" ist eine Liste Ihrer insta
 
 #### UC-07: Firmware aktualisieren
 Der tiptoi Manager informiert automatisch über verfügbare Firmware-Updates und hilft beim Aktualisieren des Betriebssystems des Stifts. Das Update wird durch den User heruntergeladen und auf den Stift übertragen. 
+
+
+![Anwendungsfalldiagramm TipToi-Stift](/Anwendungsdiagramm_Stift.png)
+
+#### UC-01: Produkt aktivieren und spielen
+Das Kind tippt mit dem Tiptoi-Stift auf das Aktivierungszeichen eines Tiptoi-Produkts. Der Stift liest den OID-Code aus und spielt direkt die zugehörigen Audiodateien ab. Dadurch kann das Kind sofort mit dem Buch oder Spiel interagieren.
+
+#### UC-02: Audiodatei auf Stift übertragen
+Die Eltern verbinden den Stift mit dem PC. Der PC App Manager überträgt die zuvor heruntergeladene Audiodatei automatisch auf den Stift. Der Fortschritt wird angezeigt, und nach Abschluss ist der Inhalt auf dem Stift verfügbar.
+
+#### UC-03: Stift verwalten
+Im Menü des Stifts können Eltern grundlegende Geräteeinstellungen prüfen, zum Beispiel Speicherstatus, verfügbare Inhalte oder Verbindungsinformationen. Diese Verwaltungsfunktionen werden direkt über den Stift ausgeführt.
+
+#### UC-04: Einstellungen anpassen
+Das Kind oder die Eltern können die Lautstärke, Systemtöne und weitere Basis-Einstellungen direkt am Stift verändern. Diese Anpassungen gelten sofort und werden intern gespeichert.
+
+#### UC-05: Stift aufladen
+Die Eltern schließen den Stift per USB oder Netzteil an eine Stromquelle an. Der Stift lädt automatisch, ohne dass dafür Software benötigt wird. Der Ladezustand wird über eine LED oder ein akustisches Signal angezeigt.
+
+#### UC-06: Firmware aktualisieren
+Die Content Plattform stellt Firmware-Updates bereit. Wird ein Update verfügbar, wird es vom PC App Manager auf den Stift übertragen. Der Stift installiert die Firmware nach dem Übertragen automatisch und startet gegebenenfalls neu.
+
+
+## Annahmen & Grenzen – Fortlaufendes Log
+
+Dieses Log dokumentiert alle relevanten Annahmen und Systemgrenzen, die während der Modellierung des TipToi-Projekts getroffen wurden.  
+Es umfasst das gesamte System bestehend aus TipToi Stift, TipToi Manager (WLAN/USB Edition) und der Content Plattform.
+
+
+### Logbuch
+
+| Datum       | Typ        | Beschreibung                                                                                         | Begründung / Auswirkung                                                                                     |
+|-------------|------------|--------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
+| 15.10.2025  | Annahme    | Das TipToi-Projekt umfasst Stift, Manager-Software (WLAN/USB Edition) und Content-Plattform.          | Definiert die Systemgrenze für alle Diagramme und Modelle.                                                  |
+| 15.10.2025  | Annahme    | Der Stift kommuniziert über USB oder WLAN mit dem Manager.                                             | Entspricht realer Funktion; vereinfacht die Modellierung.                                                   |
+| 15.10.2025  | Grenze     | Bluetooth oder andere Funkverbindungen werden ausgeschlossen.                                          | Reduziert Modellkomplexität; Fokus bleibt auf USB/WLAN.                                                     |
+| 20.10.2025  | Annahme    | Die Content-Plattform liefert alle Inhalte (Audiofiles) und Firmware.                                  | Klare Schnittstelle zwischen internem System und externen Services.                                         |
+| 20.10.2025  | Grenze     | Technische Details der Content-Plattform werden nicht modelliert.                                      | Fokus liegt auf Architektursicht, nicht Implementierung.                                                    |
+| 22.10.2025  | Annahme    | Eltern verwalten Inhalte und Einstellungen; Kinder nutzen den Stift nur produktiv im Spielbetrieb.    | Entspricht realem Nutzungsverhalten.                                                                        |
+| 24.10.2025  | Grenze     | Fehlersituationen und Ausnahmen werden nicht im Detail modelliert.                                     | Diagramme bleiben fokussiert auf Standardabläufe.                                                           |
+| 30.10.2025  | Annahme    | Der Manager kann mehrere Stifte verwalten, aber nur einen gleichzeitig verbinden.                      | Vereinfachte technische Darstellung; eindeutige Zuordnung im Modell.                                        |
+| 05.11.2025  | Grenze     | Hardwareaspekte wie Akku, Speicherchips oder Lautsprecher werden nicht betrachtet.                     | Für Softwarearchitektur nicht relevant.                                                                     |
+| 08.11.2025  | Annahme    | Offline-Nutzung ist möglich, sofern Inhalte lokal verfügbar sind.                                      | Beeinflusst Speicherlogik, nicht jedoch Architekturdiagramme.                                               |
+| 12.11.2025  | Annahme    | Das Projekt bezieht sich ausschliesslich auf die WLAN-Edition (aktuelle Produktgeneration).            | Verhindert Versionskonflikte; hält Scope eindeutig.                                                         |
+| 12.11.2025  | Grenze     | Sicherheit & Datenschutz werden nur konzeptionell berücksichtigt.                                       | Vollständige Analyse erfolgt ausserhalb des Projektumfangs.                                                 |
+
+### Hinweis  
+Dieses Log dient der Konsistenz des Gesamtprojekts und bildet Annahmen ab, die **für alle Diagramme und Artefakte gelten**.  
+Detailfeedback zu einzelnen Use-Cases wird **nicht** im Log dokumentiert, da es keinen Einfluss auf die Systemgrenzen oder Architekturentscheidungen hat.
 
 # Kontext & Abgrenzung
 
