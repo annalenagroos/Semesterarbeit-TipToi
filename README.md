@@ -66,7 +66,21 @@ Diese Verwaltungsfunktionen werden vollständig am Gerät ausgeführt, ohne PC o
 Die Eltern verbinden den Stift per USB-Kabel oder Netzteil mit einer Stromquelle.  
 Der Stift beginnt automat
 
+---
 
+### **UC02: Audiodatei auf Stift übertragen**
+Der PC App Manager überträgt zuvor heruntergeladene Audiodateien auf den Stift.  
+Der Stift muss dazu per USB verbunden sein.  
+Nach der Übertragung sind die Inhalte sofort für das Kind nutzbar.
+
+---
+
+### **UC06: Firmware aktualisieren**
+Die Content Plattform stellt Firmware-Updates für den tiptoi-Stift bereit.  
+Der PC App Manager lädt diese Updates herunter und überträgt sie auf den Stift.  
+Der Stift installiert die Firmware selbstständig und startet bei Bedarf neu.
+
+---
 
 ## Annahmen & Grenzen – Fortlaufendes Log
 
