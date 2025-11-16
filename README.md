@@ -199,21 +199,44 @@ Im Betrieb erkennt der Stift die OID-Codes auf dem digitalen Papier und spielt d
 
 # Glossar
 
-| Begriff | Erklärung |
-|----------|------------|
-| **TipToi** | Interaktives Lernsystem von Ravensburger, bestehend aus einem digitalen Stift und Lernmaterialien mit unsichtbaren Codes (OID). |
-| **TipToi Manager** | Desktop-Anwendung zur Verwaltung von Audiodateien, Firmware-Updates und Produktaktivierungen für den TipToi-Stift. |
-| **OID (Optical Identification)** | Unsichtbare Punktmuster auf Büchern, Spielbrettern oder Puzzles, die vom Stift optisch erkannt werden. |
-| **Firmware** | Interne Software des TipToi-Stifts, die grundlegende Funktionen und Audioausgabe steuert. |
-| **Ravensburger Server** | Online-Dienst, der Audiodateien, Produktinformationen und Firmware-Updates für TipToi bereitstellt. |
-| **HTTPS** | Verschlüsseltes Kommunikationsprotokoll für den sicheren Datenaustausch zwischen Geräten und Server. |
-| **USB-Massenspeicher** | Der Stift wird am PC als externer Speicher erkannt |
-| **WLAN-Edition** | Spezialausgabe des tiptoi-Stifts der 3. Generation mit integriertem WLAN-Modul |
-| **Digitales Papier** | Gedrucktes Lernmaterial (z. B. Buch, Puzzle), das mithilfe von OID-Codes mit dem TipToi-Stift interagiert. |
-| **Komponente** | Ein logisches Software-Modul (z. B. TipToi Manager oder Web-Service) innerhalb der Systemarchitektur. |
-| **Device (Gerät)** | Physische Einheit im System, auf der Software-Komponenten oder Ausführungsumgebungen laufen (z. B. PC, Stift, Server). |
-| **System-Grenze** | Grenze zwischen dem tiptoi Manager System und externen Akteuren/Systemen |
-| **Anmeldezeichen** | Grünes Power-Button-Symbol auf der ersten Seite von tiptoi-Produkten zur Aktivierung |
+| **Begriff** | **Erklärung** |
+|-------------|----------------|
+| **Akteur** | Eine Person oder ein System, das mit TipToi interagiert. |
+| **Autoren- und Medienerstellungssystem** | System, mit dem Lerninhalte für TipToi produziert werden. |
+| **Bidirektionaler Datenfluss** | Daten, die in beide Richtungen gesendet werden können. |
+| **Client-Gerät** | PC oder Laptop, der mit dem TipToi-Stift verbunden wird. |
+| **Content Plattform** | Online-System, das Audio-Dateien, Firmware und Inhalte bereitstellt. |
+| **Content-Download** | Das Herunterladen von Audio-Dateien oder Firmware. |
+| **Desktop-Anwendung** | Auf dem Computer installierte Software wie der TipToi Manager. |
+| **Device (Gerät)** | Physisches Gerät, auf dem Software läuft (z. B. PC, Stift, Server). |
+| **Digitaler Handelsservice (DCS)** | System für digitale Käufe und Lizenzen. |
+| **Digitale Inhalte** | Dateien wie Audios, Firmware oder Medien, die der Stift benötigt. |
+| **Digitales Papier** | Gedrucktes Lernmaterial mit OID-Codes. |
+| **Execution Environment** | Software-Umgebung, in der ein Programm ausgeführt wird. |
+| **Firmware** | Interne Software des TipToi-Stifts. |
+| **HTTPS** | Verschlüsseltes Protokoll für sicheren Datenaustausch. |
+| **Inhaltsverwaltungssystem** | Teil der Plattform, der Inhalte speichert und ausliefert. |
+| **Komponente** | Ein logisches Software-Modul innerhalb der Systemarchitektur. |
+| **Netzwerkinfrastruktur** | Verbindungen und Geräte, die Internetzugang ermöglichen. |
+| **OID (Optical Identification)** | Unsichtbare Punktmuster, die vom TipToi-Stift erkannt werden. |
+| **PC App Manager** | Software auf dem PC zur Verwaltung des Stifts (TipToi Manager). |
+| **POS-System** | Kassensystem, das Produktdaten an Ravensburger übermittelt. |
+| **Produktaktivierung** | Vorgang, bei dem ein Produkt mit dem Stift verknüpft wird. |
+| **Produktdatenbank** | Datenbank mit Produkt- und Lizenzinformationen. |
+| **Ravensburger Server** | Online-Dienst für Audio-Dateien, Produktinformationen und Updates. |
+| **Stift-Inhalte verwalten** | Inhalte auf dem Stift anzeigen, löschen oder aktualisieren. |
+| **Stift-Software** | Software im TipToi-Stift, die alle Funktionen steuert. |
+| **System-Grenze** | Grenze zwischen dem TipToi-System und externen Akteuren oder Systemen. |
+| **Telemetrie** | Automatische Übermittlung technischer Stift-Daten. |
+| **TipToi** | Interaktives Lernsystem mit digitalem Stift und Lernmaterialien. |
+| **TipToi Manager** | Desktop-Programm zur Verwaltung des TipToi-Stifts. |
+| **TipToi Stift** | Elektronischer Stift, der Codes liest und Audios abspielt. |
+| **USB-Massenspeicher** | Der Stift erscheint am PC wie ein externer Speicher. |
+| **USB-Verbindung** | Kabelverbindung zwischen Stift und PC. |
+| **WLAN-Konfiguration** | Einrichtung einer WLAN-Verbindung auf dem Stift. |
+| **WLAN-Edition** | TipToi-Stift mit integriertem WLAN-Modul. |
+| **WLAN-Router** | Gerät, das den Stift mit dem Internet verbindet. |
+| **Webservice / REST-API** | Online-Schnittstelle, über die Daten zwischen Stift, Manager und Server übertragen werden. |
 
 ---
 
