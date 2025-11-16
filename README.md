@@ -1,8 +1,8 @@
-# TipToi
+# tiptoi
 
-TipToi ist ein interaktives Lernsystem, welches Wissen auf spielerische und lebendige Weise vermittelt. Mit dem TipToi-Stift können Kinder Bücher, Spiele oder Puzzles entdecken, indem sie einfach auf Bilder oder Symbole tippen. Sofort ertönen passende Geräusche, Stimmen oder Erklärungen – so wird Lernen zu einem spannenden Erlebnis. Die TipToi-Anwendung auf dem Computer oder Tablet dient dazu, neue Inhalte auf den Stift zu laden und ihn mit verschiedenen Themenwelten zu erweitern. So können Kinder immer wieder Neues entdecken, selbstständig lernen und dabei jede Menge Spass haben.
+TipToi ist ein interaktives Lernsystem, welches Wissen auf spielerische und lebendige Weise vermittelt. Mit dem tiptoi-Stift können Kinder Bücher, Spiele oder Puzzles entdecken, indem sie einfach auf Bilder oder Symbole tippen. Sofort ertönen passende Geräusche, Stimmen oder Erklärungen – so wird Lernen zu einem spannenden Erlebnis. Die tiptoi-Anwendung auf dem Computer oder Tablet dient dazu, neue Inhalte auf den Stift zu laden und ihn mit verschiedenen Themenwelten zu erweitern. So können Kinder immer wieder Neues entdecken, selbstständig lernen und dabei jede Menge Spass haben.
 
-# Architekturdokumentation der Software TipToi
+# Architekturdokumentation der Software tiptoi
 
 Die Architekturdokumentation basiert auf dem Template von arc42[^1].
 
@@ -16,17 +16,17 @@ Die Architekturdokumentation basiert auf dem Template von arc42[^1].
 
 ![Anwendungsfalldiagramm tiptoi-Manager](/Anwendungsfalldiagramm_TipToi.png)
 
-#### UC-01: UserCase-01: Produkt aktivieren und spielen
+#### UC-01: Produkt aktivieren und spielen
 Das Kind tippt mit dem tiptoi-Stift auf das Anmeldezeichen (grünes Power-Button-Symbol) auf der ersten Doppelseite des tiptoi-Produkts. Der Stift liest den OID-Code aus dem Produkt und spielt die entsprechende Audiodatei ab.
 
 #### UC-02: Stift mit PC verbinden und erkennen (via USB)
-Verbindet den eingeschalteten tiptoi-Stift mit dem Rechner des Users. Der tiptoi-Stift wird von der Software automatisch erkannt und als USB-Massenspeicher angezeigt.
+Verbindet den eingeschalteten tiptoi-Stift mit dem Rechner des Benutzers. Der tiptoi-Stift wird von der Software automatisch erkannt und als USB-Massenspeicher angezeigt.
 
 #### UC-03: WLAN am Stift konfigurieren
 Zur Einrichtung der WLAN-Verbindung stellt der Stift kurzzeitig ein unverschlüsseltes WLAN-Netz bereit (tiptoi_TW...), mit dem sich ein Hilfsgerät verbinden kann. Über die IP-Adresse 192.168.1.1 im Browser werden dem Stift die WLAN-Zugangsdaten übergeben. Der Stift bestätigt die erfolgreiche Verbindung.
 
 #### UC-04: Audiodatei suchen und herunterladen
-Der User gibt in der Suchleiste den Titel des tiptoi-Produkts ein und bestätigt. Bestätigung durch Klick auf das Download-Icon am tiptoi. Der Download startet automatisch vom Ravensburger Server.
+Der Benutzer gibt in der Suchleiste den Titel des tiptoi-Produkts ein und bestätigt. Bestätigung durch Klick auf das Download-Icon am tiptoi. Der Download startet automatisch vom Ravensburger Server.
 
 #### UC-05: Audiodatei auf Stift übertragen
 Die Audiodatei wird automatisch auf den angeschlossenen tiptoi-Stift installiert. Der tiptoi Manager zeigt den Fortschritt an.
@@ -35,14 +35,14 @@ Die Audiodatei wird automatisch auf den angeschlossenen tiptoi-Stift installiert
 In der Navigation unter "Stift und Inhalte verwalten" ist eine Liste Ihrer installierten Produkte. Nicht benötigte Audiodateien können gelöscht werden, um Speicherplatz freizugeben. Der Manager zeigt auch an, ob Aktualisierungen für installierte Produkte verfügbar sind.
 
 #### UC-07: Firmware aktualisieren
-Der tiptoi Manager informiert automatisch über verfügbare Firmware-Updates und hilft beim Aktualisieren des Betriebssystems des Stifts. Das Update wird durch den User heruntergeladen und auf den Stift übertragen. 
+Der tiptoi Manager informiert automatisch über verfügbare Firmware-Updates und hilft beim Aktualisieren des Betriebssystems des Stifts. Das Update wird durch den Benutzer heruntergeladen und auf den Stift übertragen. 
 
 ### Anwendungsfall tiptoi-Stift
 
 ![Anwendungsfalldiagramm tiptoi-Stift](/Anwendungsdiagramm_Stift.png)
 
 #### UC-01: Produkt aktivieren und spielen
-Das Kind tippt mit dem Tiptoi-Stift auf das Aktivierungszeichen eines Tiptoi-Produkts. Der Stift liest den OID-Code aus und spielt direkt die zugehörigen Audiodateien ab. Dadurch kann das Kind sofort mit dem Buch oder Spiel interagieren.
+Das Kind tippt mit dem tiptoi-Stift auf das Aktivierungszeichen eines tiptoi-Produkts. Der Stift liest den OID-Code aus und spielt direkt die zugehörigen Audiodateien ab. Dadurch kann das Kind sofort mit dem Buch oder Spiel interagieren.
 
 #### UC-05: Audiodatei auf Stift übertragen
 Die Eltern verbinden den Stift mit dem PC. Der PC App Manager überträgt die zuvor heruntergeladene Audiodatei automatisch auf den Stift. Der Fortschritt wird angezeigt, und nach Abschluss ist der Inhalt auf dem Stift verfügbar.
@@ -54,7 +54,7 @@ Im Menü des Stifts können Eltern grundlegende Geräteeinstellungen prüfen, zu
 Das Kind oder die Eltern können die Lautstärke, Systemtöne und weitere Basis-Einstellungen direkt am Stift verändern. Diese Anpassungen gelten sofort und werden intern gespeichert.
 
 #### UC-09: Stift aufladen
-Die Eltern schließen den Stift per USB oder Netzteil an eine Stromquelle an. Der Stift lädt automatisch, ohne dass dafür Software benötigt wird. Der Ladezustand wird über eine LED oder ein akustisches Signal angezeigt.
+Die Eltern schliessen den Stift per USB oder Netzteil an eine Stromquelle an. Der Stift lädt automatisch, ohne dass dafür Software benötigt wird. Der Ladezustand wird über eine LED oder ein akustisches Signal angezeigt.
 
 #### UC-07: Firmware aktualisieren
 Die Content Plattform stellt Firmware-Updates bereit. Wird ein Update verfügbar, wird es vom PC App Manager auf den Stift übertragen. Der Stift installiert die Firmware nach dem Übertragen automatisch und startet gegebenenfalls neu.
@@ -62,15 +62,15 @@ Die Content Plattform stellt Firmware-Updates bereit. Wird ein Update verfügbar
 
 ## Annahmen & Grenzen – Fortlaufendes Log
 
-Dieses Log dokumentiert alle relevanten Annahmen und Systemgrenzen, die während der Modellierung des TipToi-Projekts getroffen wurden.  
-Es umfasst das gesamte System bestehend aus TipToi Stift, TipToi Manager (WLAN/USB Edition) und der Content Plattform.
+Dieses Log dokumentiert alle relevanten Annahmen und Systemgrenzen, die während der Modellierung des tiptoi-Projekts getroffen wurden.  
+Es umfasst das gesamte System bestehend aus tiptoi Stift, tiptoi Manager (WLAN/USB Edition) und der Content Plattform.
 
 
 ### Logbuch
 
 | Datum       | Typ        | Beschreibung                                                                                         | Begründung / Auswirkung                                                                                     |
 |-------------|------------|--------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
-| 15.10.2025  | Annahme    | Das TipToi-Projekt umfasst Stift, Manager-Software (WLAN/USB Edition) und Content-Plattform.          | Definiert die Systemgrenze für alle Diagramme und Modelle.                                                  |
+| 15.10.2025  | Annahme    | Das tiptoi-Projekt umfasst Stift, Manager-Software (WLAN/USB Edition) und Content-Plattform.          | Definiert die Systemgrenze für alle Diagramme und Modelle.                                                  |
 | 15.10.2025  | Annahme    | Der Stift kommuniziert über USB oder WLAN mit dem Manager.                                             | Entspricht realer Funktion; vereinfacht die Modellierung.                                                   |
 | 15.10.2025  | Grenze     | Bluetooth oder andere Funkverbindungen werden ausgeschlossen.                                          | Reduziert Modellkomplexität; Fokus bleibt auf USB/WLAN.                                                     |
 | 20.10.2025  | Annahme    | Die Content-Plattform liefert alle Inhalte (Audiofiles) und Firmware.                                  | Klare Schnittstelle zwischen internem System und externen Services.                                         |
@@ -91,13 +91,13 @@ Detailfeedback zu einzelnen Use-Cases wird **nicht** im Log dokumentiert, da es 
 
 ![Kontextdiagramm_Tiptoi](/kontextdiagramm_tiptoi.png)
 
-Das TipToi Integrated Learning Environment (ILE) stellt ein vernetztes Lernökosystem der Ravensburger AG dar, das physische Lernprodukte mit digitaler Audio-Interaktion verbindet. Kern des Systems ist der TipToi Digital Pen, der mittels Optical Identifier Codes (OID) gedruckte Markierungen auf Lernmedien erkennt und kontextabhängige Audioinhalte auslöst. Diese Inhalte werden in proprietären GME-Dateiformaten gespeichert, die strukturierte Metadaten, Audiosequenzen und Interaktionslogik enthalten.
+Das tiptoi Integrated Learning Environment (ILE) stellt ein vernetztes Lernökosystem der Ravensburger AG dar, das physische Lernprodukte mit digitaler Audio-Interaktion verbindet. Kern des Systems ist der tiptoi Digital Pen, der mittels Optical Identifier Codes (OID) gedruckte Markierungen auf Lernmedien erkennt und kontextabhängige Audioinhalte auslöst. Diese Inhalte werden in proprietären GME-Dateiformaten gespeichert, die strukturierte Metadaten, Audiosequenzen und Interaktionslogik enthalten.
 
 Die TipToi Manager Application auf PC/Mac fungiert als Bindeglied zwischen Benutzer, Gerät und der Ravensburger Plattform zur Inhaltsbereitstellung. Über diese Plattform werden lizenzierte Inhalte, Firmware-Updates und Medienpakete bereitgestellt, während lokale Synchronisations-Services die Offline-Verfügbarkeit sicherstellen. Der Erziehungsberechtigte (Elternkonto) übernimmt dabei Geräteverwaltung, Content-Käufe und Datensynchronisation über WLAN oder USB-Schnittstellen.
+	
+Das Kontextdiagramm modelliert die Systemgrenze des tiptoi ILE als geschlossene, integrierte Lernarchitektur mit externen Entitäten wie Content-Autoren, Distributionspartnern, pädagogischen Einrichtungen und Supportsystemen. Es zeigt den Datenfluss von der Content-Erstellung über Autorisierung und Distribution bis zur Endnutzung im Lernkontext und verdeutlicht die technische und organisatorische Kopplung zwischen physischem Lernmedium, digitalem Content-Management und Nutzerinteraktion.
 
-Das Kontextdiagramm modelliert die Systemgrenze des TipToi ILE als geschlossene, integrierte Lernarchitektur mit externen Entitäten wie Content-Autoren, Distributionspartnern, pädagogischen Einrichtungen und Supportsystemen. Es zeigt den Datenfluss von der Content-Erstellung über Autorisierung und Distribution bis zur Endnutzung im Lernkontext und verdeutlicht die technische und organisatorische Kopplung zwischen physischem Lernmedium, digitalem Content-Management und Nutzerinteraktion.
-
-Ziel der Darstellung ist eine architektonische Sicht auf das TipToi-Ökosystem mit Fokus auf Interoperabilität, Datenaustausch und Integrationspunkten innerhalb der digitalen Lerninfrastruktur von Ravensburger.
+Ziel der Darstellung ist eine architektonische Sicht auf das tiptoi-Ökosystem mit Fokus auf Interoperabilität, Datenaustausch und Integrationspunkten innerhalb der digitalen Lerninfrastruktur von Ravensburger.
 
 # Qualitätsanforderungen
 
@@ -166,22 +166,22 @@ Die Erlernbarkeit ist kritisch für die Marktakzeptanz der WLAN-Edition. Die Hau
 
 ### Zweck und Kontext
 
-Das Verteilungsdiagramm beschreibt die physische und softwaretechnische Architektur des TipToi-Systems. Es stellt dar, wie die Systemkomponenten auf Geräte und Server verteilt sind und über welche Kommunikationswege digitale Inhalte (Audio, Firmware, Metadaten) bereitgestellt und genutzt werden. Es zeigt eine klare Trennung zwischen Clientgerät, Endgerät, Backend und Content-System. Diese Struktur ermöglicht eine robuste Bereitstellung digitaler Inhalte und unterstützt ein wartbares, skalierbares und überwiegend offline funktionierendes Gesamtsystem.
+Das Verteilungsdiagramm beschreibt die physische und softwaretechnische Architektur des tiptoi-Systems. Es stellt dar, wie die Systemkomponenten auf Geräte und Server verteilt sind und über welche Kommunikationswege digitale Inhalte (Audio, Firmware, Metadaten) bereitgestellt und genutzt werden. Es zeigt eine klare Trennung zwischen Clientgerät, Endgerät, Backend und Content-System. Diese Struktur ermöglicht eine robuste Bereitstellung digitaler Inhalte und unterstützt ein wartbares, skalierbares und überwiegend offline funktionierendes Gesamtsystem.
 
 ### Systemübersicht der Systemelemente
 **PC / Laptop**
 
-Der PC bzw. Laptop dient als Clientgerät und stellt das Betriebssystem als Ausführungsumgebung für den TipToi Manager bereit.
-Dieser verwaltet den TipToi-Stift, lädt Inhalts- und Firmwaredateien über HTTPS vom Backend und überträgt sie per USB oder optional WLAN auf den Stift.
+Der PC bzw. Laptop dient als Clientgerät und stellt das Betriebssystem als Ausführungsumgebung für den tiptoi Manager bereit.
+Dieser verwaltet den tiptoi-Stift, lädt Inhalts- und Firmwaredateien über HTTPS vom Backend und überträgt sie per USB oder optional WLAN auf den Stift.
 
-**TipToi-Stift**
+** tiptoi-Stift**
 
-Der TipToi-Stift verwendet eine eingebettete Firmware zur OID-Erkennung, Audioausgabe und lokalen Inhaltsverwaltung. Inhalte werden vom TipToi Manager übernommen; zusätzlich kann der Stift über HTTPS Staus- oder Registrierungsdaten an den Backend-Webservice senden.
+Der tiptoi-Stift verwendet eine eingebettete Firmware zur OID-Erkennung, Audioausgabe und lokalen Inhaltsverwaltung. Inhalte werden vom tiptoi Manager übernommen; zusätzlich kann der Stift über HTTPS Status- oder Registrierungsdaten an den Backend-Webservice senden.
 
 **Ravensburger Server**
 
-Der Server bildet das Backend und stellt in einer Webserver-Umgebung den TipToi Webservice (REST-API) bereit.
-Dieser liefert Inhalte und Firmware an den TipToi Manager und greift auf die Produktdatenbank zu, in der Produkt- und Lizenzdaten verwaltet werden.
+Der Server bildet das Backend und stellt in einer Webserver-Umgebung den tiptoi Webservice (REST-API) bereit.
+Dieser liefert Inhalte und Firmware an den tiptoi Manager und greift auf die Produktdatenbank zu, in der Produkt- und Lizenzdaten verwaltet werden.
 
 **Content Plattform**
 
@@ -189,11 +189,11 @@ Die Content Plattform umfasst das Inhaltsverwaltungssystem sowie die Content-Aus
 
 **Digitales Papier (OID)**
 
-Das digitale Papier enthält OID-Muster, die vom TipToi-Stift optisch erkannt werden. Es besitzt keine eigene Software, dient jedoch als physische Schnittstelle für die Offline-Nutzung der Inhalte.
+Das digitale Papier enthält OID-Muster, die vom tiptoi-Stift optisch erkannt werden. Es besitzt keine eigene Software, dient jedoch als physische Schnittstelle für die Offline-Nutzung der Inhalte.
 
 ### Kommunikations- und Interaktionsmodell
 
-Der TipToi Manager lädt Inhalte über den Webservice vom Ravensburger Server, welcher die Daten aus der Content Plattform bezieht. Die übertragenen Inhalte werden anschliessend per USB oder WLAN auf den TipToi-Stift synchronisiert.
+Der tiptoi Manager lädt Inhalte über den Webservice vom Ravensburger Server, welcher die Daten aus der Content Plattform bezieht. Die übertragenen Inhalte werden anschliessend per USB oder WLAN auf den tiptoi-Stift synchronisiert.
 Im Betrieb erkennt der Stift die OID-Codes auf dem digitalen Papier und spielt die lokal gespeicherten Inhalte autonom ab.
 
 
@@ -201,42 +201,60 @@ Im Betrieb erkennt der Stift die OID-Codes auf dem digitalen Papier und spielt d
 
 | **Begriff** | **Erklärung** |
 |-------------|----------------|
-| **Akteur** | Eine Person oder ein System, das mit TipToi interagiert. |
-| **Autoren- und Medienerstellungssystem** | System, mit dem Lerninhalte für TipToi produziert werden. |
+| **Aktivierungscode** | Code, der ein tiptoi-Produkt freischaltet. |
+| **Akteur** | Eine Person oder ein System, das mit tiptoi interagiert. |
+| **Autoren- und Medienerstellungssystem** | System, mit dem Lerninhalte für tiptoi produziert werden. |
 | **Bidirektionaler Datenfluss** | Daten, die in beide Richtungen gesendet werden können. |
-| **Client-Gerät** | PC oder Laptop, der mit dem TipToi-Stift verbunden wird. |
+| **Client-Gerät** | PC oder Laptop, der mit dem tiptoi-Stift verbunden wird. |
 | **Content Plattform** | Online-System, das Audio-Dateien, Firmware und Inhalte bereitstellt. |
 | **Content-Download** | Das Herunterladen von Audio-Dateien oder Firmware. |
-| **Desktop-Anwendung** | Auf dem Computer installierte Software wie der TipToi Manager. |
+| **Desktop-Anwendung** | Auf dem Computer installierte Software wie der tiptoi Manager. |
 | **Device (Gerät)** | Physisches Gerät, auf dem Software läuft (z. B. PC, Stift, Server). |
 | **Digitaler Handelsservice (DCS)** | System für digitale Käufe und Lizenzen. |
 | **Digitale Inhalte** | Dateien wie Audios, Firmware oder Medien, die der Stift benötigt. |
 | **Digitales Papier** | Gedrucktes Lernmaterial mit OID-Codes. |
+| **Distributionspartner** | Unternehmen oder Händler, die tiptoi-Produkte vertreiben. |
+| **Download-Icon** | Symbol in der Software, über das ein Download gestartet wird. |
+| **Elternkonto** | Benutzerkonto für Eltern zur Verwaltung von Käufen, Einstellungen und Inhalten. |
+| **Erlernbarkeit** | Beschreibt, wie einfach ein Benutzer das System zum ersten Mal bedienen kann. |
 | **Execution Environment** | Software-Umgebung, in der ein Programm ausgeführt wird. |
-| **Firmware** | Interne Software des TipToi-Stifts. |
+| **Firmware** | Interne Software des tiptoi-Stifts. |
+| **GME-Dateiformat** | Proprietäres Dateiformat, das tiptoi-Audio und Interaktionslogik enthält. |
+| **Hilfsgerät** | Gerät wie Smartphone, Tablet oder PC, das zur Einrichtung des Stift-WLANs genutzt wird. |
 | **HTTPS** | Verschlüsseltes Protokoll für sicheren Datenaustausch. |
 | **Inhaltsverwaltungssystem** | Teil der Plattform, der Inhalte speichert und ausliefert. |
+| **Integrationspunkte** | Stellen, an denen verschiedene Systeme miteinander verbunden sind. |
+| **Interne Inhalte / lokaler Speicher** | Speicherbereich im Stift, in dem heruntergeladene Dateien abgelegt werden. |
+| **IP-Adresse 192.168.1.1** | Lokale Adresse, unter der die WLAN-Einrichtung des Stifts erreichbar ist. |
 | **Komponente** | Ein logisches Software-Modul innerhalb der Systemarchitektur. |
+| **LED-Anzeige** | Leuchtelement des Stifts zur Anzeige von Lade- oder Systemstatus. |
+| **Leistungseffizienz** | Beschreibt, wie schnell und ressourcenschonend das System reagiert. |
+| **Metadaten** | Zusatzinformationen zu Audio- oder Inhaltsdateien, z. B. Titel oder OID-Zuordnung. |
+| **Modifizierbarkeit** | Beschreibt, wie leicht ein System erweitert oder angepasst werden kann. |
 | **Netzwerkinfrastruktur** | Verbindungen und Geräte, die Internetzugang ermöglichen. |
-| **OID (Optical Identification)** | Unsichtbare Punktmuster, die vom TipToi-Stift erkannt werden. |
-| **PC App Manager** | Software auf dem PC zur Verwaltung des Stifts (TipToi Manager). |
+| **OID (Optical Identification)** | Unsichtbare Punktmuster, die vom tiptoi-Stift erkannt werden. |
+| **Offline-Nutzung** | Betrieb des Stifts ohne Internet, wenn Inhalte lokal gespeichert sind. |
+| **PC App Manager** | Software auf dem PC zur Verwaltung des Stifts (tiptoi Manager). |
 | **POS-System** | Kassensystem, das Produktdaten an Ravensburger übermittelt. |
-| **Produktaktivierung** | Vorgang, bei dem ein Produkt mit dem Stift verknüpft wird. |
 | **Produktdatenbank** | Datenbank mit Produkt- und Lizenzinformationen. |
 | **Ravensburger Server** | Online-Dienst für Audio-Dateien, Produktinformationen und Updates. |
-| **Stift-Inhalte verwalten** | Inhalte auf dem Stift anzeigen, löschen oder aktualisieren. |
-| **Stift-Software** | Software im TipToi-Stift, die alle Funktionen steuert. |
-| **System-Grenze** | Grenze zwischen dem TipToi-System und externen Akteuren oder Systemen. |
+| **Stift-Software** | Software im tiptoi-Stift, die alle Funktionen steuert. |
+| **Supportsysteme** | Systeme, die technische Unterstützung oder Hilfestellung bieten. |
+| **Synchronisations-Services** | Dienste, die Inhalte zwischen PC, Stift und Plattform abgleichen. |
+| **System-Grenze** | Grenze zwischen dem tiptoi-System und externen Akteuren oder Systemen. |
 | **Telemetrie** | Automatische Übermittlung technischer Stift-Daten. |
-| **TipToi** | Interaktives Lernsystem mit digitalem Stift und Lernmaterialien. |
-| **TipToi Manager** | Desktop-Programm zur Verwaltung des TipToi-Stifts. |
-| **TipToi Stift** | Elektronischer Stift, der Codes liest und Audios abspielt. |
+| **tiptoi** | Interaktives Lernsystem mit digitalem Stift und Lernmaterialien. |
+| **tiptoi Manager** | Desktop-Programm zur Verwaltung des tiptoi-Stifts. |
+| **tiptoi Stift** | Elektronischer Stift, der Codes liest und Audios abspielt. |
 | **USB-Massenspeicher** | Der Stift erscheint am PC wie ein externer Speicher. |
 | **USB-Verbindung** | Kabelverbindung zwischen Stift und PC. |
-| **WLAN-Konfiguration** | Einrichtung einer WLAN-Verbindung auf dem Stift. |
-| **WLAN-Edition** | TipToi-Stift mit integriertem WLAN-Modul. |
-| **WLAN-Router** | Gerät, das den Stift mit dem Internet verbindet. |
+| **Usability (Benutzbarkeit)** | Wie einfach und intuitiv ein System zu bedienen ist. |
+| **Webserver-Umgebung** | Server-System, das Webdienste wie APIs ausführt. |
 | **Webservice / REST-API** | Online-Schnittstelle, über die Daten zwischen Stift, Manager und Server übertragen werden. |
+| **WLAN-Konfiguration** | Einrichtung einer WLAN-Verbindung auf dem Stift. |
+| **WLAN-Edition** | tiptoi-Stift mit integriertem WLAN-Modul. |
+| **WLAN-Router** | Gerät, das den Stift mit dem Internet verbindet. |
+
 
 ---
 
@@ -247,7 +265,3 @@ Im Betrieb erkennt der Stift die OID-Codes auf dem digitalen Papier und spielt d
 - Ravensburger Serviceportal: service.ravensburger.de/tiptoi
 - tiptoi Manager Download-Seite: ravensburger.de/tiptoi-manager
 - Wikipedia: de.wikipedia.org/wiki/Tiptoi
-
----
-
-[^1]: [arc42-Template](https://www.arc42.de/overview/)# Semesterarbeit_TipToi
