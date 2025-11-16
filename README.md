@@ -44,19 +44,19 @@ Der tiptoi Manager informiert automatisch über verfügbare Firmware-Updates und
 #### UC-01: Produkt aktivieren und spielen
 Das Kind tippt mit dem Tiptoi-Stift auf das Aktivierungszeichen eines Tiptoi-Produkts. Der Stift liest den OID-Code aus und spielt direkt die zugehörigen Audiodateien ab. Dadurch kann das Kind sofort mit dem Buch oder Spiel interagieren.
 
-#### UC-02: Audiodatei auf Stift übertragen
+#### UC-05: Audiodatei auf Stift übertragen
 Die Eltern verbinden den Stift mit dem PC. Der PC App Manager überträgt die zuvor heruntergeladene Audiodatei automatisch auf den Stift. Der Fortschritt wird angezeigt, und nach Abschluss ist der Inhalt auf dem Stift verfügbar.
 
-#### UC-03: Stift verwalten
+#### UC-06b: Stift verwalten
 Im Menü des Stifts können Eltern grundlegende Geräteeinstellungen prüfen, zum Beispiel Speicherstatus, verfügbare Inhalte oder Verbindungsinformationen. Diese Verwaltungsfunktionen werden direkt über den Stift ausgeführt.
 
-#### UC-04: Einstellungen anpassen
+#### UC-08: Einstellungen anpassen
 Das Kind oder die Eltern können die Lautstärke, Systemtöne und weitere Basis-Einstellungen direkt am Stift verändern. Diese Anpassungen gelten sofort und werden intern gespeichert.
 
-#### UC-05: Stift aufladen
+#### UC-09: Stift aufladen
 Die Eltern schließen den Stift per USB oder Netzteil an eine Stromquelle an. Der Stift lädt automatisch, ohne dass dafür Software benötigt wird. Der Ladezustand wird über eine LED oder ein akustisches Signal angezeigt.
 
-#### UC-06: Firmware aktualisieren
+#### UC-07: Firmware aktualisieren
 Die Content Plattform stellt Firmware-Updates bereit. Wird ein Update verfügbar, wird es vom PC App Manager auf den Stift übertragen. Der Stift installiert die Firmware nach dem Übertragen automatisch und startet gegebenenfalls neu.
 
 
