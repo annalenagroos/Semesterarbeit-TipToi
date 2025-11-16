@@ -113,13 +113,58 @@ Detailfeedback zu einzelnen Use-Cases wird **nicht** im Log dokumentiert, da es 
 
 ![Kontextdiagramm_Tiptoi](/kontextdiagramm_tiptoi.png)
 
-Das tiptoi Integrated Learning Environment (ILE) stellt ein vernetztes Lernökosystem der Ravensburger AG dar, das physische Lernprodukte mit digitaler Audio-Interaktion verbindet. Kern des Systems ist der tiptoi Digital Pen, der mittels Optical Identifier Codes (OID) gedruckte Markierungen auf Lernmedien erkennt und kontextabhängige Audioinhalte auslöst. Diese Inhalte werden in proprietären GME-Dateiformaten gespeichert, die strukturierte Metadaten, Audiosequenzen und Interaktionslogik enthalten.
+## Kurzbeschreibung
 
-Die TipToi Manager Application auf PC/Mac fungiert als Bindeglied zwischen Benutzer, Gerät und der Ravensburger Plattform zur Inhaltsbereitstellung. Über diese Plattform werden lizenzierte Inhalte, Firmware-Updates und Medienpakete bereitgestellt, während lokale Synchronisations-Services die Offline-Verfügbarkeit sicherstellen. Der Erziehungsberechtigte (Elternkonto) übernimmt dabei Geräteverwaltung, Content-Käufe und Datensynchronisation über WLAN oder USB-Schnittstellen.
-	
-Das Kontextdiagramm modelliert die Systemgrenze des tiptoi ILE als geschlossene, integrierte Lernarchitektur mit externen Entitäten wie Content-Autoren, Distributionspartnern, pädagogischen Einrichtungen und Supportsystemen. Es zeigt den Datenfluss von der Content-Erstellung über Autorisierung und Distribution bis zur Endnutzung im Lernkontext und verdeutlicht die technische und organisatorische Kopplung zwischen physischem Lernmedium, digitalem Content-Management und Nutzerinteraktion.
+**Zweck und Kontext**
+Das Kontextdiagramm modelliert das TipToi Integrated Learning Environment (ILE) als zentralen Systemkern des TipToi-Ökosystems und beschreibt dessen Systemgrenze, die relevanten Akteure sowie die angrenzenden externen Subsysteme. Die Darstellung spezifiziert, welche Informations- und Steuerflüsse in das ILE hinein und aus ihm herauslaufen und wie das System in die übergeordnete technische Infrastruktur von Ravensburger eingebettet ist.
+Im Sinne der Softwarearchitektur dient das Diagramm der Abgrenzung des fachlichen Verantwortungsbereichs, der Identifikation externer Schnittstellen und der Beschreibung der Interaktionspunkte des ILE.
 
-Ziel der Darstellung ist eine architektonische Sicht auf das tiptoi-Ökosystem mit Fokus auf Interoperabilität, Datenaustausch und Integrationspunkten innerhalb der digitalen Lerninfrastruktur von Ravensburger.
+**Systemübersicht der Umgebungselemente**
+**Akteure**
+Endnutzer (Kind)
+Der Endnutzer interagiert direkt mit physischen TipToi-Medien. Über den Stift entstehen Ereignisse, die vom ILE als Lerninteraktionen, Audio-Trigger und Medienzugriffe verarbeitet werden. Diese stellen die primären fachlichen Eingaben in das System dar.
+
+Erziehungsberechtigter (Elternkonto)
+Das Elternkonto übernimmt administrative Aufgaben. Der Datenfluss zum ILE umfasst Gerätekonfigurationen, Inhaltsverwaltung, Downloads, Updates und Support-Informationen. Dieser Akteur stellt die operative Verwaltungsschnittstelle für Gerät und Inhalte dar.
+
+Lehrkraft / Bildungseinrichtung
+Im schulischen Einsatz erfolgt ein bidirektionaler Datenfluss zwischen der Bildungseinrichtung und dem ILE. Die Interaktionen umfassen pädagogische Nutzung sowie optional die Übertragung von Lernfortschrittsdaten für didaktische Auswertungen.
+
+**Externe Systeme**
+
+Autoren- und Medienerstellungssystem
+Dieses System bildet die Content-Produktionspipeline und liefert Lerninhalte, Metadaten und didaktische Medien aus Autorenwerkzeugen in das ILE. Es fungiert als vorgelagertes Subsystem innerhalb der Wertschöpfungskette der Medienerstellung.
+
+Ravensburger Digitaler Handelsservice (DCS)
+Der DCS stellt die digitale Distributions- und Lizenzierungsplattform dar. An das ILE werden Kaufabwicklungen, digitale Inhaltsdateien und Lizenzdaten übertragen. Dadurch wird das ILE in die Ravensburger-Commerce-Architektur integriert.
+
+Einzelhandel & POS-Systeme
+Der physische Einzelhandel liefert Produkte, Aktivierungscodes und Lizenzinformationen als Eingaben in das ILE. Diese gelten für die Inbetriebnahme der Geräte und die Aktivierung von physischen Lernprodukten.
+
+Öffentliches Internet / WLAN
+Die Netzwerk-Infrastruktur stellt den bidirektionalen Kommunikationskanal für Netzwerkzugang, Synchronisation und Telemetriedaten bereit. Sie bildet die technische Transportebene für Serviceaufrufe, Inhaltsbereitstellung und Firmware-Operationen.
+
+**Kommunikations- und Interaktionsmodell**
+
+Das Kontextdiagramm zeigt eine klar definierte Menge an gerichteten und bidirektionalen Datenflüssen, über die das ILE mit seiner Umgebung kommuniziert.
+Das ILE fungiert als zentraler Integrationspunkt, an dem:
+
+- Nutzungsereignisse (Endnutzer)
+
+- administrative Operationen (Elternkonto)
+
+- pädagogische Interaktionen (Lehrkräfte)
+
+- Content-Artefakte (Autorensystem)
+
+- Lizenz- und Produktdaten (DCS, POS)
+
+- technische Service-Kommunikation (Internet/WLAN)
+
+zusammenlaufen.
+
+Die Modellierung verdeutlicht die Kontextposition des ILE innerhalb der TipToi-Architektur und schafft eine Grundlage für die Spezifikation tiefergehender fachlicher, technischer und nicht-funktionaler Anforderungen.
+
 
 # Qualitätsanforderungen
 
