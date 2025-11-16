@@ -115,12 +115,12 @@ Detailfeedback zu einzelnen Use-Cases wird **nicht** im Log dokumentiert, da es 
 
 ## Kurzbeschreibung
 
-## Zweck und Kontext
+### Zweck und Kontext
 
 Das Kontextdiagramm modelliert das TipToi Integrated Learning Environment (ILE) als zentralen Systemkern des TipToi-Ökosystems und beschreibt dessen Systemgrenze, die relevanten Akteure sowie die angrenzenden externen Subsysteme. Die Darstellung spezifiziert, welche Informations- und Steuerflüsse in das ILE hinein und aus ihm herauslaufen und wie das System in die übergeordnete technische Infrastruktur von Ravensburger eingebettet ist.
 Im Sinne der Softwarearchitektur dient das Diagramm der Abgrenzung des fachlichen Verantwortungsbereichs, der Identifikation externer Schnittstellen und der Beschreibung der Interaktionspunkte des ILE.
 
-## Systemübersicht der Umgebungselemente
+### Systemübersicht der Umgebungselemente
 **Akteure**
 
 Endnutzer (Kind)
@@ -146,7 +146,7 @@ Der physische Einzelhandel liefert Produkte, Aktivierungscodes und Lizenzinforma
 Öffentliches Internet / WLAN
 Die Netzwerk-Infrastruktur stellt den bidirektionalen Kommunikationskanal für Netzwerkzugang, Synchronisation und Telemetriedaten bereit. Sie bildet die technische Transportebene für Serviceaufrufe, Inhaltsbereitstellung und Firmware-Operationen.
 
-## Kommunikations- und Interaktionsmodell
+### Kommunikations- und Interaktionsmodell
 
 Das Kontextdiagramm zeigt eine klar definierte Menge an gerichteten und bidirektionalen Datenflüssen, über die das ILE mit seiner Umgebung kommuniziert.
 Das ILE fungiert als zentraler Integrationspunkt, an dem:
