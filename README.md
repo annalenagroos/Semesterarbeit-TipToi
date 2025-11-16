@@ -8,7 +8,9 @@ Die Architekturdokumentation basiert auf dem Template von arc42[^1].
 
 # Einführung und Ziele
 
-*Kurze Beschreibung der Anwendung und Ziele des Business* 
+Diese Architekturdokumentation beschreibt Aufbau, Struktur und technische Zusammenhänge des tiptoi-Systems bestehend aus tiptoi-Stift, tiptoi Manager und der Content-Plattform von Ravensburger. Ziel ist es, die relevanten Komponenten, Datenflüsse und Schnittstellen so darzustellen, dass Wartung, Weiterentwicklung und Analyse des Systems nachvollziehbar möglich sind.
+Die Dokumentation richtet sich an Entwickler, Architekten und Studierende, die ein einheitliches Verständnis über die Systemarchitektur benötigen. Der Schwerpunkt liegt auf der Modellierung der Kernfunktionen wie Produktaktivierung, Inhaltsverwaltung, Firmware-Updates und der Kommunikation zwischen Stift, Manager und Backend.
+Darüber hinaus definiert dieses Kapitel die fachlichen und technischen Ziele des Systems: zuverlässige Bereitstellung digitaler Inhalte, sichere Datenübertragung, offline-fähige Nutzung sowie eine benutzerfreundliche Verwaltung durch Eltern. Die beschriebenen Modelle dienen als Grundlage für die folgenden architektonischen Sichten und Qualitätsanforderungen. 
 
 ## Funktionale Anforderungen
 
