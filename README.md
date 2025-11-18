@@ -124,26 +124,33 @@ Im Sinne der Softwarearchitektur dient das Diagramm der Abgrenzung des fachliche
 **Akteure**
 
 Kind
+
 Das Kind nutzt die TipToi-Lernmedien und erzeugt über den Stift Ereignisse, die vom ILE verarbeitet werden. Der unidirektionale Datenfluss umfasst Lerninteraktionen, Audio-Trigger und Medienzugriffe und bildet die primären fachlichen Nutzeraktionen des Systems.
 
 Eltern
+
 Eltern übernehmen die administrative Steuerung des Lernsystems. Der Datenfluss zum ILE umfasst Gerätekonfiguration, Inhaltsverwaltung, Downloads, Updates und Support-Informationen. Eltern fungieren damit als operative Administrationsschnittstelle für Geräte- und Inhaltsmanagement.
 
 Lehrkraft / Bildungseinrichtung
+
 Im institutionellen Einsatz besteht ein bidirektionaler Datenfluss zwischen Bildungseinrichtung und ILE. Dieser umfasst pädagogische Nutzung sowie optional die Übermittlung von Lernfortschrittsdaten zur didaktischen Auswertung.
 
 **Externe Systeme**
 
 Autoren- und Medienerstellungssystem
+
 Dieses System bildet die Content-Produktionspipeline und liefert Lerninhalte, Metadaten und didaktische Medien aus Autorenwerkzeugen in das ILE. Es fungiert als vorgelagertes Subsystem innerhalb der Wertschöpfungskette der Medienerstellung.
 
 Ravensburger Digitaler Handelsservice (DCS)
+
 Der DCS stellt die digitale Distributions- und Lizenzierungsplattform dar. An das ILE werden Kaufabwicklungen, digitale Inhaltsdateien und Lizenzdaten übertragen. Dadurch wird das ILE in die Ravensburger-Commerce-Architektur integriert.
 
 Einzelhandel & POS-Systeme
+
 Der physische Einzelhandel liefert Produkte, Aktivierungscodes und Lizenzinformationen als Eingaben in das ILE. Diese gelten für die Inbetriebnahme der Geräte und die Aktivierung von physischen Lernprodukten.
 
 Öffentliches Internet / WLAN
+
 Die Netzwerk-Infrastruktur stellt den bidirektionalen Kommunikationskanal für Netzwerkzugang, Synchronisation und Telemetriedaten bereit. Sie bildet die technische Transportebene für Serviceaufrufe, Inhaltsbereitstellung und Firmware-Operationen.
 
 ### Kommunikations- und Interaktionsmodell
