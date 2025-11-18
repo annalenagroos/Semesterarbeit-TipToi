@@ -111,7 +111,7 @@ Detailfeedback zu einzelnen Use-Cases wird **nicht** im Log dokumentiert, da es 
 
 # Kontext & Abgrenzung
 
-![Kontextdiagramm_Tiptoi](/kontextdiagramm_tiptoi.png)
+![Kontextdiagramm_Tiptoi](/Kontextdiagramm_tiptoi.png)
 
 ## Kurzbeschreibung
 
@@ -123,14 +123,14 @@ Im Sinne der Softwarearchitektur dient das Diagramm der Abgrenzung des fachliche
 ### Systemübersicht der Umgebungselemente
 **Akteure**
 
-Endnutzer (Kind)
-Der Endnutzer interagiert direkt mit physischen TipToi-Medien. Über den Stift entstehen Ereignisse, die vom ILE als Lerninteraktionen, Audio-Trigger und Medienzugriffe verarbeitet werden. Diese stellen die primären fachlichen Eingaben in das System dar.
+Kind
+Das Kind nutzt die TipToi-Lernmedien und erzeugt über den Stift Ereignisse, die vom ILE verarbeitet werden. Der unidirektionale Datenfluss umfasst Lerninteraktionen, Audio-Trigger und Medienzugriffe und bildet die primären fachlichen Nutzeraktionen des Systems.
 
-Erziehungsberechtigter (Elternkonto)
-Das Elternkonto übernimmt administrative Aufgaben. Der Datenfluss zum ILE umfasst Gerätekonfigurationen, Inhaltsverwaltung, Downloads, Updates und Support-Informationen. Dieser Akteur stellt die operative Verwaltungsschnittstelle für Gerät und Inhalte dar.
+Eltern
+Eltern übernehmen die administrative Steuerung des Lernsystems. Der Datenfluss zum ILE umfasst Gerätekonfiguration, Inhaltsverwaltung, Downloads, Updates und Support-Informationen. Eltern fungieren damit als operative Administrationsschnittstelle für Geräte- und Inhaltsmanagement.
 
 Lehrkraft / Bildungseinrichtung
-Im schulischen Einsatz erfolgt ein bidirektionaler Datenfluss zwischen der Bildungseinrichtung und dem ILE. Die Interaktionen umfassen pädagogische Nutzung sowie optional die Übertragung von Lernfortschrittsdaten für didaktische Auswertungen.
+Im institutionellen Einsatz besteht ein bidirektionaler Datenfluss zwischen Bildungseinrichtung und ILE. Dieser umfasst pädagogische Nutzung sowie optional die Übermittlung von Lernfortschrittsdaten zur didaktischen Auswertung.
 
 **Externe Systeme**
 
@@ -151,9 +151,9 @@ Die Netzwerk-Infrastruktur stellt den bidirektionalen Kommunikationskanal für N
 Das Kontextdiagramm zeigt eine klar definierte Menge an gerichteten und bidirektionalen Datenflüssen, über die das ILE mit seiner Umgebung kommuniziert.
 Das ILE fungiert als zentraler Integrationspunkt, an dem:
 
-- Nutzungsereignisse (Endnutzer)
+- Nutzungsereignisse (Kind)
 
-- administrative Operationen (Elternkonto)
+- administrative Operationen (Eltern)
 
 - pädagogische Interaktionen (Lehrkräfte)
 
